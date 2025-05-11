@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Color Search Box</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 50px;
+    }
+
+    input[type="text"] {
+      padding: 10px;
+      width: 200px;
+      font-size: 16px;
+    }
+
+    #colorBox {
+      width: 300px;
+      height: 200px;
+      margin: 30px auto;
+      border: 2px solid #ccc;
+      transition: background-color 0.3s ease;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Type a Color Name</h1>
+  <input type="text" id="colorInput" placeholder="Type your favourt" />
+
+  <div id="colorBox"></div>
+
+  <script>
+    const input = document.getElementById('colorInput');
+    const box = document.getElementById('colorBox');
+
+    input.addEventListener('input', () => {
+      const color = input.value.trim();
+      box.style.backgroundColor = color;
+    });
+  </script>
+
+</body>
+</html>
